@@ -5,7 +5,12 @@ import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.fontColor}>Hello React Native</Text>
+      <Text
+        style={styles.fontColor}
+        numberOfLines={1}
+      >
+        Hello React Native, A really really long text. I wanna make this even longer and see what happens!
+        </Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
