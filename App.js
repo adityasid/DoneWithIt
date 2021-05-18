@@ -7,10 +7,10 @@ export default function App() {
   const handlePress = () => { console.log("Text Pressed") }
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={[styles.container, containerStyle]}>
       <Button
         title="Click Me"
-        color="orange"
+        color="blue"
         onPress={
           () =>
             Alert.prompt("My title", "My message", (text) => console.log(text))
@@ -21,6 +21,8 @@ export default function App() {
     </SafeAreaView>
   );
 }
+
+const containerStyle = { backgroundColor: "lightblue" }
 
 const styles = StyleSheet.create({
   container: {
