@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   View,
-  StyleSheet
+  StyleSheet,
+  SafeAreaView
 } from 'react-native';
 
 
@@ -13,21 +14,23 @@ export default function App() {
       style={{
         backgroundColor: "white",
         flex: 1,
-        flexDirection: 'row'
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'stretch'
       }}
     >
       <View
         style={{
           backgroundColor: 'dodgerblue',
           width: 100,
-          height: 100,
+          // height: 300,
         }}
       />
       <View
         style={{
           backgroundColor: 'gold',
           width: 100,
-          height: 100,
+          height: 200,
         }}
       />
       <View
