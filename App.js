@@ -28,13 +28,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
   },
   fontColor: {
     color: 'white'
-  },
-  droidSafeArea: {
-    paddingTop: Platform.OS === 'android' ? 25 : 0
   },
 });
