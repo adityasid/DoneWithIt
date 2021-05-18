@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, SafeAreaView, Platform, Image, TouchableNativeFeedback } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView, Platform, Button } from 'react-native';
 
 export default function App() {
 
@@ -8,23 +8,11 @@ export default function App() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text
-        style={styles.fontColor}
-        // numberOfLines={1}
-        onPress={handlePress()}
-      >
-        Hello React Native, A really really long text. I wanna make this even longer and see what happens!
-      </Text>
-
-      <TouchableNativeFeedback
-        onPress={() => console.log("Image Tapped")}
-      >
-        <View style={{ width: 200, height: 70, backgroundColor: "white" }} >
-
-        </View>
-
-      </TouchableNativeFeedback>
-
+      <Button
+        title="Click Me"
+        color="orange"
+        onPress={() => console.log("Button Tapped")}
+      />
 
       {/* <StatusBar style="auto" /> */}
     </SafeAreaView>
@@ -34,7 +22,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'dodgerblue',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
