@@ -16,7 +16,9 @@ export default function App() {
         flex: 1,
         flexDirection: 'row',
         justifyContent: 'space-between',
-        alignItems: 'stretch'
+        alignItems: 'stretch',
+        flexWrap: 'wrap',
+        alignContent: 'center'
       }}
     >
       <View
@@ -37,8 +39,21 @@ export default function App() {
         style={{
           backgroundColor: 'tomato',
           width: 100,
+          height: 400,
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: 'gray',
+          width: 100,
           height: 100,
-          alignSelf: 'flex-end'
+        }}
+      />
+      <View
+        style={{
+          backgroundColor: 'greenyellow',
+          width: 100,
+          height: 700,
         }}
       />
     </View>
