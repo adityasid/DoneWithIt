@@ -1,4 +1,4 @@
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import {
   StyleSheet,
@@ -6,12 +6,18 @@ import {
   View,
   SafeAreaView,
   Platform,
-  Dimensions
+  Dimensions,
+  StatusBar
 } from 'react-native';
+
+import {
+  useDimensions,
+  useDeviceOrientation
+} from '@react-native-community/hooks'
 
 export default function App() {
 
-  console.log(Dimensions.get("screen"));
+  const { landscape } = useDeviceOrientation();
 
   return (
     <SafeAreaView style={[styles.container, containerStyle]}>
@@ -19,12 +25,13 @@ export default function App() {
         style={{
           backgroundColor: 'gray',
           width: '50%',
-          height: 70,
+          height: landscape ? '100%' : '30%',
 
         }}
       >
-        <Text style={{ color: 'white' }}>React Native</Text>
+        <Text style={styles.fontColor}>React Native</Text>
       </View>
+      {/* <StatusBar /> */}
     </SafeAreaView>
   );
 }
@@ -37,7 +44,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0,
     // alignItems: 'center',
-    justifyContent: 'center'
+    // justifyContent: 'center'
   },
   fontColor: {
     color: 'white'
