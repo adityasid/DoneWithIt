@@ -15,10 +15,9 @@ export default function App() {
         backgroundColor: "white",
         flex: 1,
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        // justifyContent: 'space-between',
         alignItems: 'stretch',
-        flexWrap: 'wrap',
-        alignContent: 'center'
+        alignContent: 'center',
       }}
     >
       <View
@@ -44,9 +43,21 @@ export default function App() {
           backgroundColor: 'tomato',
           width: 100,
           height: 400,
+          top: 40,
+          left: 20,
+          position: 'absolute',
         }}
       />
+      <View
+        style={{
+          backgroundColor: 'gray',
+          width: 100,
+          height: 700,
+        }}
+      />
+
     </View>
+
   );
 }
 
