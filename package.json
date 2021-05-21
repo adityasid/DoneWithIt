@@ -1,5 +1,6 @@
 {
   "main": "node_modules/expo/AppEntry.js",
+  "icon": ".assets/DD.jpg",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
